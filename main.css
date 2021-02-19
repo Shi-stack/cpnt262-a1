@@ -1,0 +1,108 @@
+/*Basic Reset Code*/
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Styling container*/
+
+.container{
+  width:100%;
+  height:100vh;
+  /*Place here your background image in future or background color.. for this I am keeping it simple */
+
+}
+
+/*Styling nav and moving to the right side of window*/
+
+/* Editing Hamburger Menu*/
+/*That 3 line which you will create to make hamburger Icon*/
+
+.hamburger-menu{
+  width: 45px;
+  height: 40px;
+ /* background-color: rgb(223, 160, 78); */
+  position: fixed;
+  top:50px;
+  right: 50px;
+  cursor: pointer;
+  /*Making hamburger Menu Flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*To display that 3 Lines in Hamburger Menu we have to work on class=line*/
+
+.line{
+  width: 100%;
+  height: 4px;
+  background-color: rgb(66, 40, 6);
+  transition: all 0.8s;
+}
+
+/*Giving 3D effect to Hamburger Menu*/
+
+.change .line-1{
+  transform: rotateZ(-50deg) translate(-10px , 9px);
+
+}
+
+.change .line-2{
+  opacity: 0;
+
+}
+
+.change .line-3{
+  transform: rotateZ(50deg) translate(-10px , -9px);
+
+}
+
+/*Designing and styling Nav ..moving it to right*/
+
+.nav {
+  width:300px;
+  height:100%;
+  background-color: burlywood; /*Change background color matching to your theme or background image*/
+  position: fixed;
+  top: 0;
+  right: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border-radius: 30% 0 0 80%;
+  transition: right 0.8s cubic-bezier(1,0,0,1);
+}
+
+.change{
+  right:0;
+}
+/*Designing Nav Item making it to right*/
+
+.nav-list{
+
+  text-align: right;
+}
+
+/*In side nav items designing*/
+
+.nav-items{
+
+  list-style: none;
+  margin:30px;
+}
+
+.nav-link{
+
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color:black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  background-color: rgb(204, 155, 103);
+}
